@@ -25,7 +25,7 @@ class Size{
         else{
             style += `{{var}}val{{=}}100% / {{var}}columns * {{var}}n{{;}}\n`;
 
-            style += this.resources.styles.objToCallMedia(1, {
+            style += this.resources.styles.objToCallMedia(mediaPostfix, {
                 width: `{{i}}calc({{string-var}}val{{/string-var}} - {{string-var}}offset${mediaPostfix}{{/string-var}}){{/i}}`,
                 'flex-basis': `{{i}}calc({{string-var}}val{{/string-var}} - {{string-var}}offset${mediaPostfix}{{/string-var}}){{/i}}`
             });
